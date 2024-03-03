@@ -1,4 +1,4 @@
-# TSP_UTILS #
+# tspUTilS #
 This repository is built for dealing with .tsp type data.
 ## Structure ##
 
