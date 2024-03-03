@@ -9,14 +9,22 @@ type_set = set()
 
 tsp_test_data = {}
 
-sample = []
+sample_200 = []
+#sample_1000 = []
+sample_ohter = []
 for filename in os.listdir(Tspfolder):
     if filename.endswith('.tsp'):
         problem = tsplib95.load(Tspfolder + filename)
-        if problem.dimension <= 1000:
-            sample.append(filename)
+        if problem.dimension <= 200:
+            sample_200.append(filename)
+        #elif problem.dimension <= 5000:
+            #sample_1000.append(filename)
+        else:
+            sample_ohter.append(filename)
 
-sample_files = random.sample(sample,20)
+sample_files = []
+sample_files += random.sample(sample_200,4)
+sample_files += random.sample(sample_ohter,2)
 left_files = list(set(os.listdir(Tspfolder)) - set(sample_files))
 
 minv = 0
