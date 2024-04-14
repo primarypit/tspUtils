@@ -36,7 +36,7 @@ for f in sample_files:
     tmp_matrix = tmp.return_matrix()
     tsp_test_data[f.split('.')[0]] = tmp_matrix / np.max(tmp_matrix) # normalize to [0,1]
 
-with open('tspTestset_NS.py', 'w') as file:
+with open('tspTestset_F.py', 'w') as file:
     # Write the dictionary as code to the file
     file.write("import numpy as np\n\n")
     file.write("sample_files = " + str(sample_files) + "\n\n")
